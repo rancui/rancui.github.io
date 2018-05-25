@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>H5动画之逐帧动画 | we work together</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="动画" />
+    
+    <meta name="description" content="什么是逐帧动画 要了解 CSS3 逐帧动画，首先要明确什么是逐帧动画。 看一下维基百科中的定义：  定格动画，又名逐帧动画，是一种动画技术，其原理即将每帧不同的图像连续播放，从而产生动画效果。  简而言之，实现逐帧动画需要两个条件：（1）相关联的不同图像，即动画帧；（2）连续播放。  我们儿时的记忆，手翻书，他所实现的就是逐帧动画：  （图片来源：知乎） 前端逐帧动画实现方案 在细聊 css3 逐">
+<meta name="keywords" content="动画">
+<meta property="og:type" content="article">
+<meta property="og:title" content="H5动画之逐帧动画">
+<meta property="og:url" content="https://weworktogether.github.io/2018/05/22/H5动画之逐帧动画/index.html">
+<meta property="og:site_name" content="we work together">
+<meta property="og:description" content="什么是逐帧动画 要了解 CSS3 逐帧动画，首先要明确什么是逐帧动画。 看一下维基百科中的定义：  定格动画，又名逐帧动画，是一种动画技术，其原理即将每帧不同的图像连续播放，从而产生动画效果。  简而言之，实现逐帧动画需要两个条件：（1）相关联的不同图像，即动画帧；（2）连续播放。  我们儿时的记忆，手翻书，他所实现的就是逐帧动画：  （图片来源：知乎） 前端逐帧动画实现方案 在细聊 css3 逐">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://img.aotu.io/Yettyzyt/css3-animation-frame/sfs.jpg">
+<meta property="og:updated_time" content="2018-05-22T04:18:15.810Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="H5动画之逐帧动画">
+<meta name="twitter:description" content="什么是逐帧动画 要了解 CSS3 逐帧动画，首先要明确什么是逐帧动画。 看一下维基百科中的定义：  定格动画，又名逐帧动画，是一种动画技术，其原理即将每帧不同的图像连续播放，从而产生动画效果。  简而言之，实现逐帧动画需要两个条件：（1）相关联的不同图像，即动画帧；（2）连续播放。  我们儿时的记忆，手翻书，他所实现的就是逐帧动画：  （图片来源：知乎） 前端逐帧动画实现方案 在细聊 css3 逐">
+<meta name="twitter:image" content="https://img.aotu.io/Yettyzyt/css3-animation-frame/sfs.jpg">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/vendor/titillium-web/styles.css">
+    <link rel="stylesheet" href="/vendor/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/vendor/lightgallery/css/lightgallery.min.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web开发/">Web开发</a></li></ul>
+                                    
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Web开发/">Web开发</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-H5动画之逐帧动画" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        H5动画之逐帧动画
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-subtitle">
+                <a href="/2018/05/22/H5动画之逐帧动画/" class="article-date">
+    <time datetime="2018-05-22T02:31:50.000Z" itemprop="datePublished">2018-05-22</time>
+</a>
+by <a style="color:#006bde; text-decoration:none;" target="_blank" href="https://github.com/rancui">rancui</a>
+
+                
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动画/">动画</a></li></ul>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="什么是逐帧动画"><a href="#什么是逐帧动画" class="headerlink" title="什么是逐帧动画"></a>什么是逐帧动画</h2><hr>
+<p>要了解 CSS3 逐帧动画，首先要明确什么是逐帧动画。</p>
+<p>看一下维基百科中的定义：</p>
+<blockquote>
+<p>定格动画，又名逐帧动画，是一种动画技术，其原理即将每帧不同的图像连续播放，从而产生动画效果。</p>
+</blockquote>
+<p>简而言之，实现逐帧动画需要两个条件：<strong>（1）相关联的不同图像，即动画帧；（2）连续播放。</strong></p>
+<p><a href="http://zhuanlan.zhihu.com/p/19855108" target="_blank" rel="noopener"></a></p>
+<p>我们儿时的记忆，手翻书，他所实现的就是逐帧动画：</p>
+<p><img src="//img.aotu.io/Yettyzyt/css3-animation-frame/sfs.jpg" alt="逐帧动画"></p>
+<p>（图片来源：<a href="http://zhuanlan.zhihu.com/p/19855108" target="_blank" rel="noopener">知乎</a>）</p>
+<h2 id="前端逐帧动画实现方案"><a href="#前端逐帧动画实现方案" class="headerlink" title="前端逐帧动画实现方案"></a>前端逐帧动画实现方案</h2><hr>
+<p>在细聊 css3 逐帧动画之前，我们先大致了解下前端实现逐帧动画有哪些方案。</p>
+<p>其实不外乎三种技术（视频可以实现所有类型的动画，暂不纳入）：gif、JavaScript、CSS3 Animation。</p>
+<p>前文提到，实现逐帧动画需要两个条件：（1）动画帧；（2）连续播放。</p>
+<p>下面我们仔细自己分析下这三种技术是怎么实现上述条件的：</p>
+<h3 id="（1）gif"><a href="#（1）gif" class="headerlink" title="（1）gif"></a>（1）gif</h3><p>在触屏页中，gif 常被用来做加载动画。如<a href="http://w.benbun.com/momo/shaibingxiang/?from=timeline&amp;isappinstalled=0" target="_blank" rel="noopener">《陌陌不孤独饭局》</a>的加载动画：</p>
+<p><img src="//img.aotu.io/Yettyzyt/css3-animation-frame/momo_loading.gif" alt="gif"></p>
+<p><strong>gif 可以有多个动画帧，连续播放是其自身属性，是否循环也是由其本身决定的。</strong>它往往用来实现小细节动画，成本较低、使用方便。</p>
+<p>但其缺点也是很明显的：</p>
+<ul>
+<li>画质上，gif 支持颜色少(最大256色)、Alpha 透明度支持差，图像锯齿毛边比较严重；</li>
+<li>交互上，不能直接控制播放、暂停、播放次数，灵活性差；</li>
+<li>性能上，gif 会引起页面周期性的 paint ，性能较差。</li>
+</ul>
+<h3 id="（2）JavaScript"><a href="#（2）JavaScript" class="headerlink" title="（2）JavaScript"></a>（2）JavaScript</h3><p><strong>JS 与 CSS3，一般是将动画帧放到背景图中。</strong></p>
+<p>不同的是， <strong>JS 是使用脚本来控制动画的连续播放的</strong>：</p>
+<ul>
+<li>可以直接改变元素的 <code>background-image</code></li>
+<li>也可以将动画帧合并成雪碧图，通过改变 <code>background-position</code> 来实现</li>
+</ul>
+<p>还是<a href="http://w.benbun.com/momo/shaibingxiang/?from=timeline&amp;isappinstalled=0" target="_blank" rel="noopener">《陌陌不孤独饭局》</a>的例子：</p>
+<p>其中有一个伸手取饭盒的动画，一共有19帧，且在第11帧处有一个交互，将雪碧图放入背景中，通过不同的样式实现不同的 <code>background-position</code> ，使用 JS 改变样式名：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.sprite-rice-1,</span><br><span class="line">.sprite-rice-2,</span><br><span class="line">…</span><br><span class="line">.sprite-rice-19&#123;</span><br><span class="line">	background-image:url(http://7xnvb2.com2.z0.glb.qiniucdn.com/img/rice.jpg);</span><br><span class="line">	background-repeat:no-repeat</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.sprite-rice-1&#123;background-position:-1800px 0&#125;</span><br><span class="line">.sprite-rice-2&#123;background-position:-900px -489px&#125;</span><br><span class="line">…</span><br><span class="line">.sprite-rice-19&#123;background-position:-1200px 0&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="//img.aotu.io/Yettyzyt/css3-animation-frame/momo_rice.jpg" alt="sprite"></p>
+<p>使用 JS 的优点是兼容性佳，交互灵活。</p>
+<h3 id="（3）CSS3-Animation"><a href="#（3）CSS3-Animation" class="headerlink" title="（3）CSS3 Animation"></a>（3）CSS3 Animation</h3><p><strong>CSS3 实际上是使用 <code>animation-timing-function</code> 的阶梯函数 <code>steps(number_of_steps, direction)</code> 来实现逐帧动画的连续播放的。</strong></p>
+<p>在移动端，CSS3 Animation 兼容性良好，相对于 JS，CSS3 逐帧动画使用简单，且效率更高，因为许多优化都在浏览器底层完成。</p>
+<p>因此在触屏页面中 CSS3 逐帧动画使用广泛，下文将对其进行详细介绍。</p>
+<h2 id="CSS3-逐帧动画的实现"><a href="#CSS3-逐帧动画的实现" class="headerlink" title="CSS3 逐帧动画的实现"></a>CSS3 逐帧动画的实现</h2><hr>
+<h3 id="（1）将动画帧合并为雪碧图"><a href="#（1）将动画帧合并为雪碧图" class="headerlink" title="（1）将动画帧合并为雪碧图"></a>（1）将动画帧合并为雪碧图</h3><p>在触屏页面中，动画往往承担页面样式实现的角色（即不需要替换），因此我们会将图片放到元素的背景中（<code>background-image</code>）。</p>
+<p>逐帧动画有不同的动画帧，我们可以通过更改 <code>background-image</code> 的值实现帧的切换，但多张图片会带来多个 HTTP 请求，且不利于文件的管理。</p>
+<p>比较合适的做法，是将所有的动画帧合并成一张雪碧图（sprite），通过改变 <code>background-position</code> 的值来实现动画帧切换。因此，逐帧动画也被称为“精灵动画（sprite animation）”。</p>
+<p>以京东到家的触屏页面<a href="http://jdc.jd.com/fd/promote/201601/djnianhuo/" target="_blank" rel="noopener">《年货送到家》</a>为例：</p>
+<p>这个动画一个有三帧，将3个动画帧合并，并放到 <code>.p8 .page_key</code> 的背景中：</p>
+<p><img src="//img.aotu.io/Yettyzyt/css3-animation-frame/p8.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.p8 .page_key &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    width: 572px;</span><br><span class="line">    height: 586px;</span><br><span class="line">    background-image: url(&quot;../img/p8.png&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="（2）使用-steps-实现动画播放"><a href="#（2）使用-steps-实现动画播放" class="headerlink" title="（2）使用 steps 实现动画播放"></a>（2）使用 steps 实现动画播放</h3><p>steps 指定了一个阶梯函数，包含两个参数：</p>
+<ul>
+<li>第一个参数指定了函数中的间隔数量（必须是正整数）；</li>
+<li>第二个参数可选，指定在每个间隔的起点或是终点发生阶跃变化，接受 start 和 end 两个值，默认为 end。</li>
+</ul>
+<p>（参考自<a href="https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property" target="_blank" rel="noopener">W3C</a>）</p>
+<p>通过<a href="https://www.w3.org/TR/css3-transitions/" target="_blank" rel="noopener">W3C</a>中的这张图片来理解 steps 的工作机制：</p>
+<p><img src="//img.aotu.io/Yettyzyt/css3-animation-frame/1-2.png" alt="steps"></p>
+<p>回到上述的例子，我们在 keyframes 中定义好每个动画帧：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@-webkit-keyframes p8&#123;</span><br><span class="line">    0%&#123;background-position: 0 0;&#125;</span><br><span class="line">    33.33%&#123;background-position: 0 -586px;&#125;</span><br><span class="line">    66.66%&#123;background-position: 0 -1172px;&#125;</span><br><span class="line">    100%&#123;background-position: 0 -1758px;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后，给他加上 <code>animation</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.p8 .page_key&#123;</span><br><span class="line">	-webkit-animation: p8 steps(1,end) 1.5s infinite;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>为什么第一个参数是1？</strong></p>
+<p>前文中提到，steps 是 <code>animation-timing-function</code> 的一个属性值，在 <a href="https://www.w3.org/TR/css3-animations/#animation-timing-function-property" target="_blank" rel="noopener">W3C</a> 中有如下说明：</p>
+<blockquote>
+<p>For a keyframed animation, the ‘animation-timing-function’ applies between keyframes, not over the entire animation. </p>
+</blockquote>
+<p>也就是说，<code>animation-timing-function</code> 应该于两个 keyframes 之间，而非整个动画。在上面的 keyframes 中，我们已经把每个帧都写出来了，所以两个 keyframes 之间的间隔是1。</p>
+<p><strong>更加简便的写法？</strong></p>
+<p>既然说 steps 第一个参数是指函数的间隔数量，那么我们就可以把 keyframes 的计算直接交给 steps 来完成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.p8 .page_key&#123;</span><br><span class="line">	-webkit-animation: p8 steps(3,end) 1.5s infinite;</span><br><span class="line">&#125;</span><br><span class="line">@-webkit-keyframes p8 &#123;</span><br><span class="line">    100% &#123;background-position: 0 -1758px;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上两种写法效果是等同的。</p>
+<h2 id="CSS3-逐帧动画使用技巧"><a href="#CSS3-逐帧动画使用技巧" class="headerlink" title="CSS3 逐帧动画使用技巧"></a>CSS3 逐帧动画使用技巧</h2><hr>
+<h3 id="（1）step-start-与-step-end"><a href="#（1）step-start-与-step-end" class="headerlink" title="（1）step-start 与 step-end"></a>（1）step-start 与 step-end</h3><p>除了 <code>steps</code> 函数，<code>animation-timing-function</code> 还有两个与逐帧动画相关的属性值 <code>step-start</code> 与 <code>step-end</code>：</p>
+<ul>
+<li><code>step-start</code> 等同于 <code>steps(1,start)</code>：在变化过程中，都是以下一帧的显示效果来填充间隔动画；</li>
+<li><code>step-end</code> 等同于 <code>steps(1,end)</code>：都是以上一帧的显示效果来填充间隔动画。</li>
+</ul>
+<h3 id="（2）动画帧的计算："><a href="#（2）动画帧的计算：" class="headerlink" title="（2）动画帧的计算："></a>（2）动画帧的计算：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$spriteWidth: 140px; // 精灵宽度 </span><br><span class="line">@keyframes ani &#123;</span><br><span class="line">  100% &#123;</span><br><span class="line">    background-position: -($spriteWidth * 12) 0; // 12帧</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="（3）适配方案：rem-scale"><a href="#（3）适配方案：rem-scale" class="headerlink" title="（3）适配方案：rem+scale"></a>（3）适配方案：rem+scale</h3><p>我们知道，rem 的计算会存在误差，因此使用雪碧图时我们并不推荐用 rem。如果是逐帧动画的话，由于计算的误差，会出现抖动的情况。</p>
+<p>那么在触屏页中，如何实现页面的适配？</p>
+<p>这里小编提供一个思路：</p>
+<ul>
+<li>非逐帧动画部分，使用 <code>rem</code> 做单位；</li>
+<li>逐帧动画部分，使用 <code>px</code> 做单位，再结合 <code>js</code> 对动画部分使用 <code>scale</code> 进行缩放。</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+
+    <!-- <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+  <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
+</div>-->
+<script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='https://o7oquuacu.qnssl.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<style>
+    .bdshare_popup_box {
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .bdshare-button-style0-16 a,
+    .bdshare-button-style0-16 .bds_more {
+        padding-left: 20px;
+        margin: 6px 10px 6px 0;
+    }
+    .bdshare_dialog_list a,
+    .bdshare_popup_list a,
+    .bdshare_popup_bottom a {
+        font-family: 'Microsoft Yahei';
+    }
+    .bdshare_popup_top {
+        display: none;
+    }
+    .bdshare_popup_bottom {
+        height: auto;
+        padding: 5px;
+    }
+</style>
+
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我们 :</p>
+        <ul class="social-links">
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/05/21/H5动画之补间动画/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">H5动画之补间动画</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/05/22/H5动画之逐帧动画/" class="thumbnail">
+    
+    
+        <span style="background-image:url(//img.aotu.io/Yettyzyt/css3-animation-frame/sfs.jpg)" alt="H5动画之逐帧动画" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2018/05/22/H5动画之逐帧动画/" class="title">H5动画之逐帧动画</a></p>
+                            <p class="item-date"><time datetime="2018-05-22T02:31:50.000Z" itemprop="datePublished">2018-05-22</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/05/21/H5动画之补间动画/" class="thumbnail">
+    
+    
+        <span style="background-image:url(//img.aotu.io/Tingglelaoo/20160506/1.gif)" alt="H5动画之补间动画" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2018/05/21/H5动画之补间动画/" class="title">H5动画之补间动画</a></p>
+                            <p class="item-date"><time datetime="2018-05-21T09:32:18.000Z" itemprop="datePublished">2018-05-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/12/wxgame-24点游戏开发/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/gbyuxia/myExercise/master/banner1.jpg)" alt="微信小程序初探之24点游戏开发" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2016/10/12/wxgame-24点游戏开发/" class="title">微信小程序初探之24点游戏开发</a></p>
+                            <p class="item-date"><time datetime="2016-10-12T02:20:00.000Z" itemprop="datePublished">2016-10-12</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/10/yuanchuang-常用API那些事儿/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/rancui/images/master/api.jpg)" alt="JavaScript常用API那些事儿" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2016/10/10/yuanchuang-常用API那些事儿/" class="title">JavaScript常用API那些事儿</a></p>
+                            <p class="item-date"><time datetime="2016-10-09T16:00:00.000Z" itemprop="datePublished">2016-10-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/09/yuanchuang-html a 标签实现打电话，发短信功能/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/liyina91/bolgImages/master/a_href.png)" alt="html a 标签实现打电话，发短信功能" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2016/10/09/yuanchuang-html a 标签实现打电话，发短信功能/" class="title">html a 标签实现打电话，发短信功能</a></p>
+                            <p class="item-date"><time datetime="2016-10-09T02:20:00.000Z" itemprop="datePublished">2016-10-09</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">2</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Load/" style="font-size: 10px;">Load</a> <a href="/tags/动画/" style="font-size: 20px;">动画</a> <a href="/tags/微信小程序/" style="font-size: 10px;">微信小程序</a> <a href="/tags/项目总结/" style="font-size: 20px;">项目总结</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">友情链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://isux.tencent.com/">腾讯ISUX</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://taobaofed.org/">淘宝FED</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://fex.baidu.com/">百度FEX</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://ued.ctrip.com/blog/">携程UED</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://www.75team.com/">360奇舞团</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>We Work Together</p>
+                <p>Copyright © 2016. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?ebf4f6902baa85472fa5f1e05e38ee86";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+        
+
+    
+        <script src="/vendor/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-share.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-video.min.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

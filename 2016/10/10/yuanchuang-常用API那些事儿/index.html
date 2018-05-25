@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>JavaScript常用API那些事儿 | we work together</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="项目总结" />
+    
+    <meta name="description" content="短暂的十一假期，感觉还没开始就结束了。。。。  但是，说过的话话是要算数滴~~ 今天我们就来聊聊JavaScript常用的API那些事儿吧~~~ 想到js，整个人的脑袋就感到······  但从事前端开发，js是必须要会的。不仅仅是前端人员，后端人员也会用到。 那么，在工作中常用到javascript的API有哪些呢？ 一. 元素查找 123456789101112131415161718   /">
+<meta name="keywords" content="项目总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript常用API那些事儿">
+<meta property="og:url" content="https://weworktogether.github.io/2016/10/10/yuanchuang-常用API那些事儿/index.html">
+<meta property="og:site_name" content="we work together">
+<meta property="og:description" content="短暂的十一假期，感觉还没开始就结束了。。。。  但是，说过的话话是要算数滴~~ 今天我们就来聊聊JavaScript常用的API那些事儿吧~~~ 想到js，整个人的脑袋就感到······  但从事前端开发，js是必须要会的。不仅仅是前端人员，后端人员也会用到。 那么，在工作中常用到javascript的API有哪些呢？ 一. 元素查找 123456789101112131415161718   /">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/rancui/images/master/api.jpg">
+<meta property="og:updated_time" content="2016-10-11T10:33:01.404Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript常用API那些事儿">
+<meta name="twitter:description" content="短暂的十一假期，感觉还没开始就结束了。。。。  但是，说过的话话是要算数滴~~ 今天我们就来聊聊JavaScript常用的API那些事儿吧~~~ 想到js，整个人的脑袋就感到······  但从事前端开发，js是必须要会的。不仅仅是前端人员，后端人员也会用到。 那么，在工作中常用到javascript的API有哪些呢？ 一. 元素查找 123456789101112131415161718   /">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/rancui/images/master/api.jpg">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/vendor/titillium-web/styles.css">
+    <link rel="stylesheet" href="/vendor/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/vendor/lightgallery/css/lightgallery.min.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web开发/">Web开发</a></li></ul>
+                                    
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Web开发/">Web开发</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-yuanchuang-常用API那些事儿" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        JavaScript常用API那些事儿
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-subtitle">
+                <a href="/2016/10/10/yuanchuang-常用API那些事儿/" class="article-date">
+    <time datetime="2016-10-09T16:00:00.000Z" itemprop="datePublished">2016-10-10</time>
+</a>
+by <a style="color:#006bde; text-decoration:none;" target="_blank" href="https://github.com/rancui">一念rancui</a>
+
+                
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/项目总结/">项目总结</a></li></ul>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>短暂的十一假期，感觉还没开始就结束了。。。。</p>
+<p><img src="https://raw.githubusercontent.com/rancui/images/master/nu.jpg" alt="" title="title"></p>
+<p>但是，说过的话话是要算数滴~~</p>
+<h2 id="今天我们就来聊聊JavaScript常用的API那些事儿吧"><a href="#今天我们就来聊聊JavaScript常用的API那些事儿吧" class="headerlink" title="今天我们就来聊聊JavaScript常用的API那些事儿吧~~~"></a>今天我们就来聊聊JavaScript常用的API那些事儿吧~~~</h2><hr>
+<p>想到js，整个人的脑袋就感到······</p>
+<p><img src="https://raw.githubusercontent.com/rancui/images/master/duang.jpg" alt="" title="title"></p>
+<p>但从事前端开发，js是必须要会的。不仅仅是前端人员，后端人员也会用到。</p>
+<p>那么，在工作中常用到javascript的API有哪些呢？</p>
+<h2 id="一-元素查找"><a href="#一-元素查找" class="headerlink" title="一. 元素查找"></a>一. 元素查找</h2><hr>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">   <span class="comment">//node</span></span><br><span class="line"><span class="built_in">document</span>.getElementById();<span class="comment">// 这个就不用注释是啥意思了吧？！</span></span><br><span class="line"><span class="built_in">document</span>.querySelector();<span class="comment">//该方法返回文档中匹配指定 CSS 选择器的第一个元素。</span></span><br><span class="line"><span class="built_in">document</span>.body;<span class="comment">// 返回文档的body元素</span></span><br><span class="line"><span class="built_in">document</span>.head;<span class="comment">// 返回文档的head元素</span></span><br><span class="line"><span class="built_in">document</span>.title;<span class="comment">// 返回当前文档的标题</span></span><br><span class="line"><span class="built_in">document</span>.documentElement;<span class="comment">//根元素，指html</span></span><br><span class="line"><span class="built_in">document</span>.doctype;<span class="comment">// 返回 html文档的文档类型对象</span></span><br><span class="line"><span class="built_in">document</span>.readyState;<span class="comment">// 返回文档状态 (载入中……)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//nodeList</span></span><br><span class="line"><span class="built_in">document</span>.querySelectorAll();</span><br><span class="line"><span class="built_in">document</span>.getElementsByClassName();</span><br><span class="line"><span class="built_in">document</span>.getElementsByTagName();</span><br><span class="line">   <span class="built_in">document</span>.scripts; <span class="comment">// 返回页面中所有脚本的集合</span></span><br><span class="line"><span class="built_in">document</span>.forms; <span class="comment">// 返回对文档中所有 Form 对象引用</span></span><br><span class="line"><span class="built_in">document</span>.images;<span class="comment">// 返回对文档中所有 Image 对象引用。</span></span><br></pre></td></tr></table></figure>
+<h2 id="二-class操作"><a href="#二-class操作" class="headerlink" title="二. class操作"></a>二. class操作</h2><hr>
+<p>我们平时常用的jquery里面有<strong>addClass(), removeClass(),toggleClass(),hasClass()</strong>这些api。</p>
+<p>但HTML5时代，classList API出现了，classList 属性返回元素的类名，作为 DOMTokenList 对象。</p>
+<p>classList实际上已经出现好多年了，因此，FireFox浏览器，Chrome浏览器都支持。IE家族中，从IE10浏览器开始才开始认可classList。</p>
+<p>移动端，Android 3.0+以上才开始支持，时至今日，移动端可以说已经几乎全部支持该api。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> <span class="comment">//增加类名, 以下皆以"classname"类名为例。</span></span><br><span class="line"> <span class="built_in">document</span>.getElementById(<span class="string">"myDIV"</span>).classList.add(<span class="string">"classname"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//移动类名</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"myDIV"</span>).classList.remove(<span class="string">"classname"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//返回布尔值，判断指定的类名是否存在</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"myDIV"</span>).classList.contains(<span class="string">"classname"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//返回类名在元素中的索引值。index是索引值，索引值从 0 开始;</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"myDIV"</span>).classList.item(index);</span><br><span class="line"></span><br><span class="line"><span class="comment">//类名切换</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"myDIV"</span>).classList.toggle(<span class="string">"classname"</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="三-属性操作"><a href="#三-属性操作" class="headerlink" title="三. 属性操作"></a>三. 属性操作</h2><hr>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//元素的图片路径</span></span><br><span class="line">element.getAttribute(<span class="string">"src"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置元素的图片路径</span></span><br><span class="line">element.setAttribute(<span class="string">"src"</span>,<span class="string">"图片的路径"</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="四-节点操作"><a href="#四-节点操作" class="headerlink" title="四. 节点操作"></a>四. 节点操作</h2><hr>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//创建元素</span></span><br><span class="line"><span class="keyword">var</span> element = <span class="built_in">document</span>.createElement(name);</span><br><span class="line"></span><br><span class="line"><span class="comment">// true，克隆节点及其属性和后代； false，克隆节点和后代；</span></span><br><span class="line">element.cloneNode(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//追加子元素</span></span><br><span class="line">element.appendChild(child);</span><br><span class="line"></span><br><span class="line"><span class="comment">//父元素</span></span><br><span class="line">element.parentNode;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//删除子元素</span></span><br><span class="line">element.parentNode.removeChild(child);</span><br><span class="line"></span><br><span class="line"><span class="comment">//在指定的节点前插入子节点</span></span><br><span class="line">parentNode.insertBefore(element,parent.childNodes[<span class="number">0</span>]);</span><br></pre></td></tr></table></figure>
+<h2 id="五-css操作"><a href="#五-css操作" class="headerlink" title="五. css操作"></a>五. css操作</h2><hr>
+<p>获取元素的样式一般有currentStyle，getComputedStyle,style这三种来就获取css的值，<br>jquery中的css()底层其实也是用到了getComputedStyle。</p>
+<p>以下是获取css样式,以元素element为例。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">element.currentStyle[attrName]；<span class="comment">//注意，此处用的是元素element</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.getComputedStyle(element)[attrName];<span class="comment">//注意，此处用的是window</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.getComputedStyle(element,<span class="string">":before"</span>);<span class="comment">//注意，此处用的是window</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//在移动端我们用style设置css样式的时候一般采用cssText比较好,可以批量操作css样式。</span></span><br><span class="line"><span class="comment">//cssText只需一次reflow，提高了页面渲染性能, 例如：</span></span><br><span class="line"></span><br><span class="line">element.style.cssText=<span class="string">"width:100px;height:100px; -webkit-transform:translate3d(0,100%,0)"</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="六-位置大小"><a href="#六-位置大小" class="headerlink" title="六. 位置大小"></a>六. 位置大小</h2><p>在我们实际的工作中，经常会用位置方面的的知识点来获取或者设置一些元素。以下以元素element为例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//对象可见内容的宽度(高度同理)不包括滚动条，不包括边框</span></span><br><span class="line">element.clientWidth;</span><br><span class="line"></span><br><span class="line"><span class="comment">//当前对象的宽度(width+padding+border)</span></span><br><span class="line">element.offsetWidth;</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">//获取对象的滚动宽度</span></span><br><span class="line">element.scrollWidth;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取对象的滚动宽度</span></span><br><span class="line">element.scrollWidth;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取对象的滚动宽度</span></span><br><span class="line">element.scrollWidth;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取对象的滚动宽度</span></span><br><span class="line">element.scrollWidth;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//相对整个页面的坐标</span></span><br><span class="line">element.pageY</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"><span class="comment">//相对可视区域的坐标</span></span><br><span class="line">element.clientY</span><br><span class="line"></span><br><span class="line"><span class="comment">//鼠标在屏幕中的位置，指的是鼠标到电脑屏幕左侧的距离</span></span><br><span class="line"><span class="comment">//与clientX的区别是clientX是到浏览器的距离。例如：当网页缩小，拖动到屏幕中间时，screnX 大于 clientX</span></span><br><span class="line">element.screenX </span><br><span class="line"></span><br><span class="line"><span class="comment">//设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离，也就是元素被滚动条向左拉动的距离。</span></span><br><span class="line">element.scrollLeft；</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离，也就是元素滚动条被向下拉动的距离。</span></span><br><span class="line">element.scrollTop；</span><br></pre></td></tr></table></figure>
+<p>除以上外，还可以用<strong>getBoundingClientRect</strong>获取元素位置。</p>
+<p>getBoundingClientRect用于获得页面中某个元素的左，上，右和下分别相对浏览器视窗的位置。该函数返回一个Object对象，该对象有6个属性：top,lef,right,bottom,width,height；这里的top、left和css中的理解很相似，width、height是元素自身的宽高，但是right，bottom和css中的理解有点不一样。right是指元素右边界距窗口最左边的距离，bottom是指元素下边界距窗口最上面的距离。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">  getBoundingClientRect()</span><br><span class="line"></span><br><span class="line">    这个方法返回一个矩形对象，包含四个属性：left、top、right和bottom。分别表示元素各边与页面上边和左边的距离。</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> box=<span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);         </span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(box.getBoundingClientRect().top);        </span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(box.getBoundingClientRect().right);      </span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(box.getBoundingClientRect().bottom);     </span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(box.getBoundingClientRect().left);       </span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">注意：IE、Firefox3+、Opera9<span class="number">.5</span>、Chrome、Safari支持，在IE中，默认坐标从(<span class="number">2</span>,<span class="number">2</span>)开始计算，导致最终距离比其他浏览器多出两个像素，我们需要做个兼容。</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.documentElement.clientTop;  <span class="comment">// 非IE为0，IE为2</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.documentElement.clientLeft; <span class="comment">// 非IE为0，IE为2</span></span><br><span class="line"></span><br><span class="line">functiongGetRectObj (element) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> rect = element.getBoundingClientRect();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> top = <span class="built_in">document</span>.documentElement.clientTop;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> left= <span class="built_in">document</span>.documentElement.clientLeft;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span>&#123;</span><br><span class="line"></span><br><span class="line">        top    :   rect.top - top,</span><br><span class="line"></span><br><span class="line">        bottom :   rect.bottom - top,</span><br><span class="line"></span><br><span class="line">        left   :   rect.left - left,</span><br><span class="line"></span><br><span class="line">        right  :   rect.right - left</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="七-移动端事件"><a href="#七-移动端事件" class="headerlink" title="七. 移动端事件"></a>七. 移动端事件</h2><hr>
+<p>移动端没有鼠标事件，只有触摸事件，分别是ontouhstart，ontouchmove，ontouchend。</p>
+<h4 id="1-在非IE的标准浏览器中，addEventListener-绑定事件的对象方法。"><a href="#1-在非IE的标准浏览器中，addEventListener-绑定事件的对象方法。" class="headerlink" title="1.在非IE的标准浏览器中，addEventListener()绑定事件的对象方法。"></a>1.在非IE的标准浏览器中，addEventListener()绑定事件的对象方法。</h4><p>addEventListener()含有三个参数，一个是事件名称，另一个是事件执行的函数，最后一个是事件捕获。</p>
+<p>obj.addEventListener(“touchmove”,function(){},true/false);</p>
+<p>这里的事件名称跟直接写的事件名称不一样，在这里前面没有on。</p>
+<h4 id="2-事件属性"><a href="#2-事件属性" class="headerlink" title="2.事件属性"></a>2.事件属性</h4><p>无论使用触摸还是手势事件，你都需要将这些事件转换为单独的触摸来使用它们。为此，你需要访问事件对象的一系列的属性。</p>
+<p>touches: 当前屏幕上所有触摸点的列表;</p>
+<p>targetTouches: 当前对象上所有触摸点的列表;</p>
+<p>changedTouches: 涉及当前事件的触摸点的列表</p>
+<p>用一个手指接触屏幕，触发事件，此时这三个属性有相同的值。</p>
+<p>用第二个手指接触屏幕，此时，touches有两个元素，每个手指触摸点为一个值。当两个手指触摸相同元素时，targetTouches和touches的值相同，否则targetTouches 只有一个值。changedTouches此时只有一个值，为第二个手指的触摸点。<br>用两个手指同时接触屏幕，此时changedTouches有两个值，每一个手指的触摸点都有一个值<br>手指滑动时，三个值都会发生变化<br>一个手指离开屏幕，touches和targetTouches中对应的元素会同时移除，而changedTouches仍然会存在元素。<br>手指都离开屏幕之后，touches和targetTouches中将不会再有值，changedTouches还会有一个值，此值为最后一个离开屏幕的手指的接触点。</p>
+<h4 id="3-在IE浏览器中，attachEvent-绑定事件的对象方法。"><a href="#3-在IE浏览器中，attachEvent-绑定事件的对象方法。" class="headerlink" title="3.在IE浏览器中，attachEvent()绑定事件的对象方法。"></a>3.在IE浏览器中，attachEvent()绑定事件的对象方法。</h4><p>obj.attachEvent(“onclick”,function(){});</p>
+<p>注意此方法中的事件名称要加上on，没有事件捕获。</p>
+<h2 id="八-创建文档碎片"><a href="#八-创建文档碎片" class="headerlink" title="八. 创建文档碎片"></a>八. 创建文档碎片</h2><hr>
+<p>如果当我们要向document中添加大量数据时(比如1w条)，因为每添加一个节点都会调用父节点的appendChild()方法，这个过程就可能会十分缓慢。因此我们可以引入createDocumentFragment()方法，它的作用是创建一个文档碎片，把要插入的新节点先附加在它上面，然后再一次性添加到document中，使用DocumentFragment进行缓存操作，引发一次回流和重绘，提高性能。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//先创建文档碎片</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> Fragmeng = <span class="built_in">document</span>.createDocumentFragment(); </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">10000</span>;i++)</span><br><span class="line"></span><br><span class="line">&#123; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> aSpan = <span class="built_in">document</span>.createElement(<span class="string">"span"</span>); </span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> aText = <span class="built_in">document</span>.createTextNode(i); </span><br><span class="line"></span><br><span class="line">    aSpan.appendChild(aText); </span><br><span class="line"></span><br><span class="line">    <span class="comment">//先附加在文档碎片中</span></span><br><span class="line"></span><br><span class="line">    Fragmeng.appendChild(aSpan);  </span><br><span class="line"></span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">//最后一次性添加到document中</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.body.appendChild(Fragmeng);</span><br></pre></td></tr></table></figure>
+<p>以上就是一些分享和总结，如需转载，请注明出处~~</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+    <!-- <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+  <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
+</div>-->
+<script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='https://o7oquuacu.qnssl.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<style>
+    .bdshare_popup_box {
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .bdshare-button-style0-16 a,
+    .bdshare-button-style0-16 .bds_more {
+        padding-left: 20px;
+        margin: 6px 10px 6px 0;
+    }
+    .bdshare_dialog_list a,
+    .bdshare_popup_list a,
+    .bdshare_popup_bottom a {
+        font-family: 'Microsoft Yahei';
+    }
+    .bdshare_popup_top {
+        display: none;
+    }
+    .bdshare_popup_bottom {
+        height: auto;
+        padding: 5px;
+    }
+</style>
+
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我们 :</p>
+        <ul class="social-links">
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/10/12/wxgame-24点游戏开发/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            微信小程序初探之24点游戏开发
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2016/10/09/yuanchuang-html a 标签实现打电话，发短信功能/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">html a 标签实现打电话，发短信功能</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/05/22/H5动画之逐帧动画/" class="thumbnail">
+    
+    
+        <span style="background-image:url(//img.aotu.io/Yettyzyt/css3-animation-frame/sfs.jpg)" alt="H5动画之逐帧动画" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2018/05/22/H5动画之逐帧动画/" class="title">H5动画之逐帧动画</a></p>
+                            <p class="item-date"><time datetime="2018-05-22T02:31:50.000Z" itemprop="datePublished">2018-05-22</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/05/21/H5动画之补间动画/" class="thumbnail">
+    
+    
+        <span style="background-image:url(//img.aotu.io/Tingglelaoo/20160506/1.gif)" alt="H5动画之补间动画" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2018/05/21/H5动画之补间动画/" class="title">H5动画之补间动画</a></p>
+                            <p class="item-date"><time datetime="2018-05-21T09:32:18.000Z" itemprop="datePublished">2018-05-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/12/wxgame-24点游戏开发/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/gbyuxia/myExercise/master/banner1.jpg)" alt="微信小程序初探之24点游戏开发" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2016/10/12/wxgame-24点游戏开发/" class="title">微信小程序初探之24点游戏开发</a></p>
+                            <p class="item-date"><time datetime="2016-10-12T02:20:00.000Z" itemprop="datePublished">2016-10-12</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/10/yuanchuang-常用API那些事儿/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/rancui/images/master/api.jpg)" alt="JavaScript常用API那些事儿" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2016/10/10/yuanchuang-常用API那些事儿/" class="title">JavaScript常用API那些事儿</a></p>
+                            <p class="item-date"><time datetime="2016-10-09T16:00:00.000Z" itemprop="datePublished">2016-10-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/09/yuanchuang-html a 标签实现打电话，发短信功能/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/liyina91/bolgImages/master/a_href.png)" alt="html a 标签实现打电话，发短信功能" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2016/10/09/yuanchuang-html a 标签实现打电话，发短信功能/" class="title">html a 标签实现打电话，发短信功能</a></p>
+                            <p class="item-date"><time datetime="2016-10-09T02:20:00.000Z" itemprop="datePublished">2016-10-09</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">2</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Load/" style="font-size: 10px;">Load</a> <a href="/tags/动画/" style="font-size: 20px;">动画</a> <a href="/tags/微信小程序/" style="font-size: 10px;">微信小程序</a> <a href="/tags/项目总结/" style="font-size: 20px;">项目总结</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">友情链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://isux.tencent.com/">腾讯ISUX</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://taobaofed.org/">淘宝FED</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://fex.baidu.com/">百度FEX</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://ued.ctrip.com/blog/">携程UED</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://www.75team.com/">360奇舞团</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>We Work Together</p>
+                <p>Copyright © 2016. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?ebf4f6902baa85472fa5f1e05e38ee86";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+        
+
+    
+        <script src="/vendor/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-share.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-video.min.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>微信小程序入门 | we work together</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="微信小程序" />
+    
+    <meta name="description" content="9月22日，微信小程序开始小范围内测。几天后微信官方发布了小程序开发文档以及小程序开发者工具。一口气看完了所有的开发文档，一个很直观的感受就是前端可以直接使用前端知识以及借助后端云服务很方便的开发应用了。 下面就讲一下微信小程序相关的基本用法 安装小程序开发者工具从微信官方下载小程序开发者工具并安装，安装好后启动开发者工具，使用微信扫描登录。 新建项目点击“添加项目”，填写AppID(如果没有Ap">
+<meta name="keywords" content="微信小程序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信小程序入门">
+<meta property="og:url" content="https://weworktogether.github.io/2016/09/29/wxa-微信小程序入门/index.html">
+<meta property="og:site_name" content="we work together">
+<meta property="og:description" content="9月22日，微信小程序开始小范围内测。几天后微信官方发布了小程序开发文档以及小程序开发者工具。一口气看完了所有的开发文档，一个很直观的感受就是前端可以直接使用前端知识以及借助后端云服务很方便的开发应用了。 下面就讲一下微信小程序相关的基本用法 安装小程序开发者工具从微信官方下载小程序开发者工具并安装，安装好后启动开发者工具，使用微信扫描登录。 新建项目点击“添加项目”，填写AppID(如果没有Ap">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/ofroad/git-learn/master/wxa/wxa-012.jpg">
+<meta property="og:updated_time" content="2018-05-22T05:28:36.637Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="微信小程序入门">
+<meta name="twitter:description" content="9月22日，微信小程序开始小范围内测。几天后微信官方发布了小程序开发文档以及小程序开发者工具。一口气看完了所有的开发文档，一个很直观的感受就是前端可以直接使用前端知识以及借助后端云服务很方便的开发应用了。 下面就讲一下微信小程序相关的基本用法 安装小程序开发者工具从微信官方下载小程序开发者工具并安装，安装好后启动开发者工具，使用微信扫描登录。 新建项目点击“添加项目”，填写AppID(如果没有Ap">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/ofroad/git-learn/master/wxa/wxa-012.jpg">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/vendor/titillium-web/styles.css">
+    <link rel="stylesheet" href="/vendor/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/vendor/lightgallery/css/lightgallery.min.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web开发/">Web开发</a></li></ul>
+                                    
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Web开发/">Web开发</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-wxa-微信小程序入门" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        微信小程序入门
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-subtitle">
+                <a href="/2016/09/29/wxa-微信小程序入门/" class="article-date">
+    <time datetime="2016-09-29T15:14:33.000Z" itemprop="datePublished">2016-09-29</time>
+</a>
+by <a style="color:#006bde; text-decoration:none;" target="_blank" href="https://github.com/ofroad">ofroad</a>
+
+                
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信小程序/">微信小程序</a></li></ul>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>9月22日，微信小程序开始小范围内测。几天后微信官方发布了小程序开发文档以及小程序开发者工具。<br>一口气看完了所有的开发文档，一个很直观的感受就是前端可以直接使用前端知识以及借助后端云服务很方便的开发应用了。</p>
+<p>下面就讲一下微信小程序相关的基本用法</p>
+<h3 id="安装小程序开发者工具"><a href="#安装小程序开发者工具" class="headerlink" title="安装小程序开发者工具"></a>安装小程序开发者工具</h3><p>从微信官方<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html" target="_blank" rel="noopener">下载小程序开发者工具</a>并安装，安装好后启动开发者工具，使用微信扫描登录。<br><img src="//raw.githubusercontent.com/ofroad/git-learn/master/wxa/wxa-001.png" alt=""></p>
+<h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><p><img src="//raw.githubusercontent.com/ofroad/git-learn/master/wxa/wxa-002.png" alt=""><br>点击“添加项目”，填写AppID(如果没有AppID，选择下方的无AppID即可)和项目名称，选择项目目录，点击添加项目即可。<br><img src="//raw.githubusercontent.com/ofroad/git-learn/master/wxa/wxa-003.png" alt=""><br>初次使用可以选择下面的创建一个 quick start 项目，这样会在开发目录里生成一个简单的 demo。<br><img src="//raw.githubusercontent.com/ofroad/git-learn/master/wxa/wxa-004.png" alt=""></p>
+<h3 id="小程序开发者工具介绍"><a href="#小程序开发者工具介绍" class="headerlink" title="小程序开发者工具介绍"></a>小程序开发者工具介绍</h3><p>(1)编辑<br><img src="//raw.githubusercontent.com/ofroad/git-learn/master/wxa/wxa-006.png" alt=""><br>编辑界面左边为项目的文件列表，右边为编辑窗口。在文件列表中点击文件即可在编辑窗口中对此文件进行编辑。</p>
+<p>(2)调试<br><img src="//raw.githubusercontent.com/ofroad/git-learn/master/wxa/wxa-011.png" alt=""><br>调试界面左边页面预览，其中左边的上面可以选择模拟的机型和网络<br>右边和chrome的调试工具界面非常类似。其中Storage是应用在本地存储的数据，AppDate是当前页面的一些数据信息。</p>
+<p>(3)项目<br><img src="//raw.githubusercontent.com/ofroad/git-learn/master/wxa/wxa-008.png" alt=""><br>此界面为应用上传和预览界面</p>
+<p>(4)重启<br>重启当前应用</p>
+<p>(5)后台<br><img src="//raw.githubusercontent.com/ofroad/git-learn/master/wxa/wxa-009.png" alt=""><br>当前应用在后台运行，可以再次切换到前台</p>
+<p>(6)缓存<br>可以清除本地存储的数据和文件</p>
+<p>(7)关闭<br>关闭当前应用，回到登录(启动)后的界面</p>
+<h3 id="小程序代码结构介绍"><a href="#小程序代码结构介绍" class="headerlink" title="小程序代码结构介绍"></a>小程序代码结构介绍</h3><p><img src="//raw.githubusercontent.com/ofroad/git-learn/master/wxa/wxa-010.png" alt=""><br>app.js<br>app.js主要定义全局的方法和变量以及监听并处理小程序的生命周期</p>
+<p>app.json<br>app.json是应用的全局配置文件，配置应用的所有组成页面和应用的界面样式</p>
+<p>app.wxss<br>app.wxss是应用的公共样式文件，和css基本一致</p>
+<p>pages目录<br>pages目录下面是应用的所有页面，每个页面都可以单独定义一个目录，目录里面包含4个文件。<br>wxml文件是当前页面的结构文件<br>js文件是当前页面的脚步文件<br>wxss文件是当前页面的样式文件，与公共样式文件app.wxss叠加使用<br>json文件是当前页面的配置文件，与全局配置文件app.json叠加使用</p>
+<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><p>小程序结构这块，微信官方定义了一套框架，了解过vue的就会感觉似曾相识。<br>样式这块，微信做了一些自己的扩展和限制，详见<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxss.html" target="_blank" rel="noopener">WXSS</a></p>
+<p>以上就是微信小程序的基本介绍。更详细的情况请参考<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/" target="_blank" rel="noopener">微信官方开发文档</a></p>
+<p>如需转载，请注明出处~~</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+    <!-- <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+  <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
+</div>-->
+<script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='https://o7oquuacu.qnssl.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<style>
+    .bdshare_popup_box {
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .bdshare-button-style0-16 a,
+    .bdshare-button-style0-16 .bds_more {
+        padding-left: 20px;
+        margin: 6px 10px 6px 0;
+    }
+    .bdshare_dialog_list a,
+    .bdshare_popup_list a,
+    .bdshare_popup_bottom a {
+        font-family: 'Microsoft Yahei';
+    }
+    .bdshare_popup_top {
+        display: none;
+    }
+    .bdshare_popup_bottom {
+        height: auto;
+        padding: 5px;
+    }
+</style>
+
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我们 :</p>
+        <ul class="social-links">
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/10/09/yuanchuang-html a 标签实现打电话，发短信功能/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            html a 标签实现打电话，发短信功能
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2016/09/28/yuanchuang-移动web开发适配/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">移动web开发适配</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/05/22/H5动画之逐帧动画/" class="thumbnail">
+    
+    
+        <span style="background-image:url(//img.aotu.io/Yettyzyt/css3-animation-frame/sfs.jpg)" alt="H5动画之逐帧动画" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2018/05/22/H5动画之逐帧动画/" class="title">H5动画之逐帧动画</a></p>
+                            <p class="item-date"><time datetime="2018-05-22T02:31:50.000Z" itemprop="datePublished">2018-05-22</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/05/21/H5动画之补间动画/" class="thumbnail">
+    
+    
+        <span style="background-image:url(//img.aotu.io/Tingglelaoo/20160506/1.gif)" alt="H5动画之补间动画" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2018/05/21/H5动画之补间动画/" class="title">H5动画之补间动画</a></p>
+                            <p class="item-date"><time datetime="2018-05-21T09:32:18.000Z" itemprop="datePublished">2018-05-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/12/wxgame-24点游戏开发/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/gbyuxia/myExercise/master/banner1.jpg)" alt="微信小程序初探之24点游戏开发" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2016/10/12/wxgame-24点游戏开发/" class="title">微信小程序初探之24点游戏开发</a></p>
+                            <p class="item-date"><time datetime="2016-10-12T02:20:00.000Z" itemprop="datePublished">2016-10-12</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/10/yuanchuang-常用API那些事儿/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/rancui/images/master/api.jpg)" alt="JavaScript常用API那些事儿" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2016/10/10/yuanchuang-常用API那些事儿/" class="title">JavaScript常用API那些事儿</a></p>
+                            <p class="item-date"><time datetime="2016-10-09T16:00:00.000Z" itemprop="datePublished">2016-10-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/09/yuanchuang-html a 标签实现打电话，发短信功能/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/liyina91/bolgImages/master/a_href.png)" alt="html a 标签实现打电话，发短信功能" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2016/10/09/yuanchuang-html a 标签实现打电话，发短信功能/" class="title">html a 标签实现打电话，发短信功能</a></p>
+                            <p class="item-date"><time datetime="2016-10-09T02:20:00.000Z" itemprop="datePublished">2016-10-09</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">2</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Load/" style="font-size: 10px;">Load</a> <a href="/tags/动画/" style="font-size: 20px;">动画</a> <a href="/tags/微信小程序/" style="font-size: 10px;">微信小程序</a> <a href="/tags/项目总结/" style="font-size: 20px;">项目总结</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">友情链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://isux.tencent.com/">腾讯ISUX</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://taobaofed.org/">淘宝FED</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://fex.baidu.com/">百度FEX</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://ued.ctrip.com/blog/">携程UED</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://www.75team.com/">360奇舞团</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>We Work Together</p>
+                <p>Copyright © 2016. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?ebf4f6902baa85472fa5f1e05e38ee86";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+        
+
+    
+        <script src="/vendor/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-share.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-video.min.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

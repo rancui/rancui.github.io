@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>移动web开发适配 | we work together</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="项目总结" />
+    
+    <meta name="description" content="说到移动web开发，自然而然的会想到H5，那什么是H5呢？ H5是HTML5（HyperText Markup Language 5）超文本标记语言第五次重大版本的简称，标准通用标记语言下的一个应用，也是一种规范和标准。 HTML5本身并非技术，而是标准。现在国内普遍说的 H5 是包括了 CSS3，JavaScript 的说法。 “超文本”就是指页面内可以包含图片、视频、链接、音乐、程序等非文字元">
+<meta name="keywords" content="项目总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动web开发适配">
+<meta property="og:url" content="https://weworktogether.github.io/2016/09/28/yuanchuang-移动web开发适配/index.html">
+<meta property="og:site_name" content="we work together">
+<meta property="og:description" content="说到移动web开发，自然而然的会想到H5，那什么是H5呢？ H5是HTML5（HyperText Markup Language 5）超文本标记语言第五次重大版本的简称，标准通用标记语言下的一个应用，也是一种规范和标准。 HTML5本身并非技术，而是标准。现在国内普遍说的 H5 是包括了 CSS3，JavaScript 的说法。 “超文本”就是指页面内可以包含图片、视频、链接、音乐、程序等非文字元">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/rancui/images/master/shipei.png">
+<meta property="og:updated_time" content="2016-10-11T10:33:25.203Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="移动web开发适配">
+<meta name="twitter:description" content="说到移动web开发，自然而然的会想到H5，那什么是H5呢？ H5是HTML5（HyperText Markup Language 5）超文本标记语言第五次重大版本的简称，标准通用标记语言下的一个应用，也是一种规范和标准。 HTML5本身并非技术，而是标准。现在国内普遍说的 H5 是包括了 CSS3，JavaScript 的说法。 “超文本”就是指页面内可以包含图片、视频、链接、音乐、程序等非文字元">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/rancui/images/master/shipei.png">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/vendor/titillium-web/styles.css">
+    <link rel="stylesheet" href="/vendor/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/vendor/lightgallery/css/lightgallery.min.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web开发/">Web开发</a></li></ul>
+                                    
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Web开发/">Web开发</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-yuanchuang-移动web开发适配" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        移动web开发适配
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-subtitle">
+                <a href="/2016/09/28/yuanchuang-移动web开发适配/" class="article-date">
+    <time datetime="2016-09-27T16:00:00.000Z" itemprop="datePublished">2016-09-28</time>
+</a>
+by <a style="color:#006bde; text-decoration:none;" target="_blank" href="https://github.com/rancui">一念rancui</a>
+
+                
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/项目总结/">项目总结</a></li></ul>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="说到移动web开发，自然而然的会想到H5，那什么是H5呢？"><a href="#说到移动web开发，自然而然的会想到H5，那什么是H5呢？" class="headerlink" title="说到移动web开发，自然而然的会想到H5，那什么是H5呢？"></a>说到移动web开发，自然而然的会想到H5，那什么是H5呢？</h2><hr>
+<p>H5是HTML5（HyperText Markup Language 5）超文本标记语言第五次重大版本的简称，标准通用标记语言下的一个应用，也是一种规范和标准。</p>
+<p>HTML5本身并非技术，而是标准。现在国内普遍说的 H5 是包括了 CSS3，JavaScript 的说法。</p>
+<p>“超文本”就是指页面内可以包含图片、视频、链接、音乐、程序等非文字元素。</p>
+<p>2014年10月29日，万维网(W3C)联盟宣布，经过接近8年的艰苦努力，该标准规范终于制定完成。</p>
+<h3 id="HTML5-中的一些有趣的新特性："><a href="#HTML5-中的一些有趣的新特性：" class="headerlink" title="HTML5 中的一些有趣的新特性："></a>HTML5 中的一些有趣的新特性：</h3><font color="#5c969d"><br>绘画<br><br>本地音频视频播放<br><br>动画<br><br>地理信息<br><br>硬件加速<br><br>离线缓存（即使在没有网络的情况下）<br><br>本地存储<br><br>从桌面拖放文件到浏览器上传<br><br>语义化标签<br></font>
+
+
+
+<h2 id="一-移动开发过的H5前端项目"><a href="#一-移动开发过的H5前端项目" class="headerlink" title="一.移动开发过的H5前端项目"></a>一.移动开发过的H5前端项目</h2><hr>
+<p>目前为止，我们团队已做过的基于微信和hybrid开发的前端项目有：</p>
+<font color="#5c969d">卡卡贷第一版，星星钱袋，学历贷，丽人贷，豆豆钱，豆豆房租，豆豆花，金薪贷，赎楼贷，安家派，手机贷，简历贷，秒分，vcs（PC端贷后催收系统），dashboard以及一些项目的推广活动页。</font>
+
+<h2 id="二-移动开发的适配"><a href="#二-移动开发的适配" class="headerlink" title="二.移动开发的适配"></a>二.移动开发的适配</h2><hr>
+<h3 id="1-采用rem单位"><a href="#1-采用rem单位" class="headerlink" title="1.采用rem单位"></a>1.采用rem单位</h3><p>众所周知，目前苹果手机的屏幕尺寸有4种，但安卓手机的屏幕碎片化却很严重，各种屏幕尺寸，这给我们在做适配的时候也带来了一定的麻烦。为了尽可能的做到全机型的屏幕适配，我们CSS的单位采用的是rem混合px，更主要的是采用rem来做适配，那么什么是rem? 为什么要使用rem？它和px之间又是怎样的一种关系呢？</p>
+<font color="#5c969d"> rem（font size of the root element）是指相对于根元素的字体大小的单位。简单的说它就是一个相对单位。计算的规则是依赖根元素，这也给px和rem换算带来了很大的便利性。</font>
+
+
+<p>rem这是个低调的css单位，近一两年开始崭露头角，有许多同学对rem的评价不一，有的在尝试使用，有的在使用过程中遇到坑就弃用了。但从一些大厂的同行的反馈以及我们自己的实践来看，rem综合评价是用来做webapp最合适的人选之一。</p>
+<p>腾讯手Q的一些推广活动页和淘宝m站也使用了rem：<a href="https://m.taobao.com/#index" target="_blank">m.taobao.com</a></p>
+<p>做适配的时候，我们可以采用CSS3中的媒体查询@meidia screen and (min-width:xxx) and (max-width:xxx) 单位是px来针对不同范围的手机屏幕尺寸来做适配。但如上所说，安卓手机的屏幕尺寸碎片化严重，这就需要我们写很多的媒体查询也不一定能覆盖所有设备全适配也不利于以后的扩展。因此，我们采用JS实现全适配，单位采用rem。<br> 我们的UI设计师给到的设计稿是iPhone6的尺寸，宽度是750px，那么我们前端在撸码的时候要把px换成rem，它们之间的换算关系如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> 	</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">doc, win</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> docEl = doc.documentElement, <span class="comment">//html根元素</span></span><br><span class="line">	resizeEvt = <span class="string">'orientationchange'</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">'orientationchange'</span> : <span class="string">'resize'</span>,</span><br><span class="line">	recalc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">var</span> clientWidth = docEl.clientWidth&gt;<span class="number">1500</span>?<span class="number">1500</span>:docEl.clientWidth;<span class="comment">//可视区域的宽度，iphone6下是375px</span></span><br><span class="line">		<span class="keyword">if</span> (!clientWidth) <span class="keyword">return</span>;</span><br><span class="line">		docEl.style.fontSize = <span class="number">20</span> * (clientWidth / <span class="number">750</span>) + <span class="string">'px'</span>;<span class="comment">//在750px的设计稿中，1rem=10px，便于换算。</span></span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</span><br><span class="line">win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</span><br><span class="line">doc.addEventListener(<span class="string">'DOMContentLoaded'</span>, recalc, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">&#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="2-通过zoom来设置："><a href="#2-通过zoom来设置：" class="headerlink" title="2.通过zoom来设置："></a>2.通过zoom来设置：</h3><p>作为一个早期IE的私有属性，其实现在的大部分浏览器也都能支持，zoom具有继承性，所以我们在最外层设置zoom，其子元素也会继承。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment">//获取做外层的元素</span></span><br><span class="line"><span class="keyword">var</span> wrapper =<span class="built_in">document</span>.getElementById(<span class="string">"wrapper"</span>); </span><br><span class="line">   <span class="comment">//设置zoom</span></span><br><span class="line">wrapper.style.zoom = <span class="built_in">Math</span>.min(<span class="built_in">document</span>.body.clientWidth, <span class="built_in">document</span>.body.clientHeight) / <span class="number">320</span>;  <span class="comment">//320是iphone4s的屏幕大小</span></span><br></pre></td></tr></table></figure>
+<p>所以当用zoom来做适配的时候，就可以完全采用px作单位来编写代码。</p>
+<p>那在HTML中又需要设置哪些呢？</p>
+<p>不同于以往的PC端页面开发，移动端页面的头部的meta中，下面这段话是必须配置的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=0&quot;&gt;</span><br></pre></td></tr></table></figure></p>
+<p>content属性值 :</p>
+<pre><code>width:网页可视区域的宽度，值可为数字或关键词device-width，可理解为网页的宽度等于手机屏幕的宽度
+
+height:同width
+
+intial-scale:页面首次被显示是可视区域的缩放级别，取值1.0则页面按实际尺寸显示，无任何缩放
+
+maximum-scale=1.0, minimum-scale=1.0;可视区域的缩放级别，
+
+maximum-scale用户可将页面放大的最大倍数，1.0将禁止用户放大到实际尺寸之上。
+
+user-scalable:是否可对页面进行缩放，no 禁止缩放
+</code></pre><h2 id="三-部分css样式重置"><a href="#三-部分css样式重置" class="headerlink" title="三.部分css样式重置"></a>三.部分css样式重置</h2><hr>
+<p><font color="#5c969d">移动端绝大多数浏览器是WebKit内核，所以需加浏览器私有前缀-webkit-</font></p>
+<h3 id="1-去除一些组件的默认样式"><a href="#1-去除一些组件的默认样式" class="headerlink" title="1.去除一些组件的默认样式"></a>1.去除一些组件的默认样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span>,</span><br><span class="line"><span class="selector-tag">button</span>,</span><br><span class="line"><span class="selector-tag">textarea</span>,</span><br><span class="line"><span class="selector-tag">select</span>,</span><br><span class="line"><span class="selector-tag">optgroup</span>,</span><br><span class="line"><span class="selector-tag">option</span> &#123;</span><br><span class="line">  <span class="attribute">-webkit-appearance</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-输入框等组件点按会出现一个“暗色”的背景，去掉该背景的方法如下："><a href="#2-输入框等组件点按会出现一个“暗色”的背景，去掉该背景的方法如下：" class="headerlink" title="2.输入框等组件点按会出现一个“暗色”的背景，去掉该背景的方法如下："></a>2.输入框等组件点按会出现一个“暗色”的背景，去掉该背景的方法如下：</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span>,<span class="selector-tag">button</span>,<span class="selector-tag">input</span>,<span class="selector-tag">optgroup</span>,<span class="selector-tag">select</span>,<span class="selector-tag">textarea</span> &#123;</span><br><span class="line">    <span class="attribute">-webkit-tap-highlight-color</span>:<span class="built_in">rgba</span>(0,0,0,0); <span class="comment">/*去掉a、input和button点击时的蓝色外边框和灰色半透明背景*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-禁用长按页面时的弹出菜单-iOS下有效-img和a标签都要加-方法如下"><a href="#3-禁用长按页面时的弹出菜单-iOS下有效-img和a标签都要加-方法如下" class="headerlink" title="3.禁用长按页面时的弹出菜单(iOS下有效) ,img和a标签都要加,方法如下:"></a>3.禁用长按页面时的弹出菜单(iOS下有效) ,img和a标签都要加,方法如下:</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span>, <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">-webkit-touch-callout</span>: none; <span class="comment">/*禁止长按链接与图片弹出菜单*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-如何移除-input-type-”number”-时浏览器自带的上下箭头（以前项目中在小米手机中遇到过这个问题）"><a href="#4-如何移除-input-type-”number”-时浏览器自带的上下箭头（以前项目中在小米手机中遇到过这个问题）" class="headerlink" title="4.如何移除 input type=”number” 时浏览器自带的上下箭头（以前项目中在小米手机中遇到过这个问题）"></a>4.如何移除 input type=”number” 时浏览器自带的上下箭头（以前项目中在小米手机中遇到过这个问题）</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">::-webkit-inner-spin-button</span> &#123;</span><br><span class="line"><span class="attribute">-webkit-appearance</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">::-webkit-outer-spin-button</span> &#123;</span><br><span class="line"><span class="attribute">-webkit-appearance</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5-禁止页面文字选择"><a href="#5-禁止页面文字选择" class="headerlink" title="5.禁止页面文字选择"></a>5.禁止页面文字选择</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line"><span class="attribute">-webkit-user-select</span>: none; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="四-给body标签加上ontouchstart"><a href="#四-给body标签加上ontouchstart" class="headerlink" title="四. 给body标签加上ontouchstart"></a>四. 给body标签加上ontouchstart</h2><hr>
+<p><font color="#5c969d">还有就是在body标签内，最好也加上ontouchstart </font>, 因为在有的浏览器里面（safari），当你给一个类加上:active状态的时候，如果没有给body加上ontouchstart，那么active的状态就不出来。</p>
+<h2 id="五-1px-border问题"><a href="#五-1px-border问题" class="headerlink" title="五. 1px border问题"></a>五. 1px border问题</h2><hr>
+<p>什么是1px border问题？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在 2014 年的 WWDC，“设计响应的 Web 体验” 一讲中，Ted O’Connor 讲到关于“retina hairlines”（retina 极细的线）：在 retina 屏上仅仅显示 1 物理像素的边框。</span><br></pre></td></tr></table></figure>
+<p>现在大家所用的手机大都是高清屏（Retina屏幕），其设备像素比为2或3或4较多，这就造成了在PC端网页中 1px 边框在移动端网页看起来有2px宽度的大小，在视觉体验上不友好，如下图：</p>
+<p><img src="https://raw.githubusercontent.com/rancui/images/master/border.png" alt="alt text" title="title"></p>
+<p>这个问题也是一直存在但也是一些前端人员没有注意过的问题。至少在我所面试的大概10多个候选人中，只有两三个人听说过或者处理过这个问题（细节之一啊…）</p>
+<p><img src="https://img.alicdn.com/tps/TB1uWfJIpXXXXaoXXXXXXXXXXXX.gif" alt="alt text" title="title"></p>
+<p>在普通屏幕下，1个css像素 对应 1个物理像素(1:1)。 在retina 屏幕下，1个css像素对应 4个物理像素(1:4)。</p>
+<p>解决这个问题其实可以有以下6种方法：</p>
+<h4 id="1-iOS8-以上支持-0-5px"><a href="#1-iOS8-以上支持-0-5px" class="headerlink" title="1. iOS8 以上支持 0.5px"></a>1. iOS8 以上支持 0.5px</h4><p>实现原理：常规属性。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.border</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0.5px</span> solid <span class="number">#ff8100</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>优点：原生、简单、常规写法。</p>
+<p>缺点：目前只有 iOS8 以上系统才能支持，iOS7及以下、安卓系统都显示为 0px，可以通过脚本判断系统然后区分处理。</p>
+<h4 id="2-CSS-渐变模拟"><a href="#2-CSS-渐变模拟" class="headerlink" title="2. CSS 渐变模拟"></a>2. CSS 渐变模拟</h4><p>实现原理：设置 1px 通过 css 实现的背景图片，50%有颜色，50%透明，以上边框为例(结合媒体查询，最小设备像素比2)：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> only screen and (-webkit-min-device-pixel-ratio: <span class="number">2</span>) &#123;</span><br><span class="line">  <span class="selector-class">.ui-border-t</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">background-position</span>: left top;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">-webkit-gradient</span>(linear, left bottom, left top, color-stop(0.5, transparent), <span class="built_in">color-stop</span>(0.5, #cecece), <span class="built_in">to</span>(#cecece));</span><br><span class="line">    <span class="attribute">background-repeat</span>: repeat-x;</span><br><span class="line">    <span class="attribute">-webkit-background-size</span>: <span class="number">100%</span> <span class="number">1px</span>;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>优点：兼容性较好，单边框、多边框可实现，大小、颜色可配置。</p>
+<p>缺点：代码量多、同时占用了背景样式</p>
+<h4 id="3-阴影"><a href="#3-阴影" class="headerlink" title="3. 阴影"></a>3. 阴影</h4><p>实现原理：利用 css 对阴影处理的方式模拟。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.border</span> &#123;</span><br><span class="line">    <span class="attribute">-webkit-box-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">1px</span> -<span class="number">1px</span> <span class="built_in">rgba</span>(0, 0, 0, 0.5);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>优点：兼容性较好，单边框、多边框、圆角可实现，大小、颜色、可配置。</p>
+<p>缺点：模拟效果强差人意，颜色不好配置。</p>
+<h4 id="4-viewport-rem"><a href="#4-viewport-rem" class="headerlink" title="4. viewport + rem"></a>4. viewport + rem</h4><p>实现原理：通过设置页面 viewport 与对应 rem 基准值。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- devicePixelRatio = 2：--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- devicePixelRatio = 3：--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"initial-scale=0.3333333333333333, maximum-scale=0.3333333333333333, minimum-scale=0.3333333333333333, user-scalable=no"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>优点：兼容比较好，写法跟常规写法无异。</p>
+<p>缺点：老项目改用 rem 单位成本较高。</p>
+<h4 id="5-border-image"><a href="#5-border-image" class="headerlink" title="5. border-image"></a>5. border-image</h4><p>实现原理：通过图片配合边框背景模拟。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.border-image</span>&#123;</span><br><span class="line">    <span class="attribute">border-image</span>: <span class="built_in">url</span>() <span class="number">2</span> <span class="number">0</span> stretch;</span><br><span class="line">    <span class="attribute">border-width</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">1px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>优点：无。</p>
+<p>缺点：图片边缘模糊，大小、颜色更改不灵活。</p>
+<h4 id="6-CSS3-缩放"><a href="#6-CSS3-缩放" class="headerlink" title="6. CSS3 缩放"></a>6. CSS3 缩放</h4><p>实现原理：利用 :before/:after 重做 border，配合 scale 使得伪元素缩小一半</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$bor_style</span> : <span class="number">1px</span> solid <span class="number">#ff8100</span>;</span><br><span class="line">%<span class="attribute">border-top</span>-1pt &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="variable">$bor_style</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">media</span> only screen and (-webkit-min-device-pixel-ratio:<span class="number">2</span>) &#123;</span><br><span class="line">    %<span class="attribute">border-top</span>-1pt &#123;</span><br><span class="line">        -webkit-<span class="attribute">transform</span>: scaleY(<span class="number">0.5</span>);</span><br><span class="line">        -webkit-<span class="attribute">transform-origin</span>: <span class="number">50%</span> <span class="number">0%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>优点：实现简单、单边框、多边框、圆角可实现，大小、颜色可配置。</p>
+<p>缺点：代码量多，可通过 sass 预处理器处理。</p>
+<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><p>经过比较与实操测试，最好的处理方式是背景渐变和 CSS3 缩放，目前已经在项目中使用。</p>
+<h2 id="六-某些安卓机器，在低版本系统里遇到的键盘弹出挡住输入框问题"><a href="#六-某些安卓机器，在低版本系统里遇到的键盘弹出挡住输入框问题" class="headerlink" title="六.某些安卓机器，在低版本系统里遇到的键盘弹出挡住输入框问题"></a>六.某些安卓机器，在低版本系统里遇到的键盘弹出挡住输入框问题</h2><hr>
+<p>这个问题，在一些安卓机器的微信里面会出现，这和微信之前内置的X5内核浏览器不无关系。我们团队曾向腾讯负责X5内核浏览器的人反馈过，也得到了回应，给了一个二维码，下载了一个TBS工具集后，点击安装“TBS内核安装” 解决了这个问题。现在微信内置的已是Blink内核。</p>
+<p>除此之外，也可以代码解决：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">     <span class="keyword">var</span> timer,windowInnerHeight2;</span><br><span class="line">     <span class="keyword">var</span> windowInnerHeight = <span class="built_in">document</span>.documentElement.clientHeight;</span><br><span class="line">     <span class="function"><span class="keyword">function</span> <span class="title">eventCheck</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">         <span class="keyword">if</span> (e) &#123; <span class="comment">//blur,focus事件触发的</span></span><br><span class="line">             <span class="keyword">if</span> (e.type == <span class="string">'click'</span>) &#123;<span class="comment">//如果是点击事件启动计时器监控是否点击了键盘上的隐藏键盘按钮，没有点击这个按钮的事件可用，keydown中也获取不到keyCode值</span></span><br><span class="line">             	</span><br><span class="line">                 setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="comment">//由于键盘弹出是有动画效果的，要获取完全弹出的窗口高度，使用了计时器</span></span><br><span class="line">                     windowInnerHeight2 = <span class="built_in">document</span>.documentElement.clientHeight;<span class="comment">//获取弹出软键盘后的窗口高度</span></span><br><span class="line">                 <span class="comment">// alert(windowInnerHeight2)</span></span><br><span class="line">                     $(<span class="string">"html,body"</span>).scrollTop(windowInnerHeight-windowInnerHeight2<span class="number">-100</span>);<span class="comment">//此处数值可根据需要改变</span></span><br><span class="line">                    timer = setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; eventCheck() &#125;, <span class="number">50</span>);</span><br><span class="line">                 &#125;, <span class="number">500</span>);</span><br><span class="line">              </span><br><span class="line">             &#125;<span class="keyword">else</span>&#123; </span><br><span class="line">           	  clearInterval(timer)</span><br><span class="line">             &#125;;</span><br><span class="line">         &#125;<span class="keyword">else</span> &#123; <span class="comment">//计时器执行的，需要判断窗口可视高度，如果改变说  明键盘隐藏了</span></span><br><span class="line">             <span class="keyword">if</span> (<span class="built_in">window</span>.innerHeight &gt; windowInnerHeight)&#123;</span><br><span class="line">                 clearInterval(timer);</span><br><span class="line">                </span><br><span class="line">             &#125;</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line">   </span><br><span class="line">   $(<span class="string">"xxx"</span>).on(<span class="string">"click"</span>,eventCheck);<span class="comment">// xxx代表你需要做处理的输入框，可自行替换成class或id</span></span><br><span class="line">   </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h2 id="七-加链接的快速反应"><a href="#七-加链接的快速反应" class="headerlink" title="七.加链接的快速反应"></a>七.加链接的快速反应</h2><p>在我们做过的项目中推广活动页或多或少都有页面之间的链接，常用的是<a href="xxxxx"></a>， 但采用ontouchstart响应速度更快：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"ui-btn"</span> <span class="attr">ontouchstart</span>=<span class="string">"location.href='./xxx.html'"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>感谢您的阅读，以上就是在实际开发中的其中一点积累，希望能够给大家一些帮助。行文匆忙，如有错误不当之处还请指正。</p>
+<p>如需转载，请注明出处~~</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+    <!-- <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+  <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
+</div>-->
+<script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='https://o7oquuacu.qnssl.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<style>
+    .bdshare_popup_box {
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .bdshare-button-style0-16 a,
+    .bdshare-button-style0-16 .bds_more {
+        padding-left: 20px;
+        margin: 6px 10px 6px 0;
+    }
+    .bdshare_dialog_list a,
+    .bdshare_popup_list a,
+    .bdshare_popup_bottom a {
+        font-family: 'Microsoft Yahei';
+    }
+    .bdshare_popup_top {
+        display: none;
+    }
+    .bdshare_popup_bottom {
+        height: auto;
+        padding: 5px;
+    }
+</style>
+
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我们 :</p>
+        <ul class="social-links">
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/09/29/wxa-微信小程序入门/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            微信小程序入门
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/05/22/H5动画之逐帧动画/" class="thumbnail">
+    
+    
+        <span style="background-image:url(//img.aotu.io/Yettyzyt/css3-animation-frame/sfs.jpg)" alt="H5动画之逐帧动画" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2018/05/22/H5动画之逐帧动画/" class="title">H5动画之逐帧动画</a></p>
+                            <p class="item-date"><time datetime="2018-05-22T02:31:50.000Z" itemprop="datePublished">2018-05-22</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/05/21/H5动画之补间动画/" class="thumbnail">
+    
+    
+        <span style="background-image:url(//img.aotu.io/Tingglelaoo/20160506/1.gif)" alt="H5动画之补间动画" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2018/05/21/H5动画之补间动画/" class="title">H5动画之补间动画</a></p>
+                            <p class="item-date"><time datetime="2018-05-21T09:32:18.000Z" itemprop="datePublished">2018-05-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/12/wxgame-24点游戏开发/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/gbyuxia/myExercise/master/banner1.jpg)" alt="微信小程序初探之24点游戏开发" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2016/10/12/wxgame-24点游戏开发/" class="title">微信小程序初探之24点游戏开发</a></p>
+                            <p class="item-date"><time datetime="2016-10-12T02:20:00.000Z" itemprop="datePublished">2016-10-12</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/10/yuanchuang-常用API那些事儿/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/rancui/images/master/api.jpg)" alt="JavaScript常用API那些事儿" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2016/10/10/yuanchuang-常用API那些事儿/" class="title">JavaScript常用API那些事儿</a></p>
+                            <p class="item-date"><time datetime="2016-10-09T16:00:00.000Z" itemprop="datePublished">2016-10-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/09/yuanchuang-html a 标签实现打电话，发短信功能/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/liyina91/bolgImages/master/a_href.png)" alt="html a 标签实现打电话，发短信功能" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+                            <p class="item-title"><a href="/2016/10/09/yuanchuang-html a 标签实现打电话，发短信功能/" class="title">html a 标签实现打电话，发短信功能</a></p>
+                            <p class="item-date"><time datetime="2016-10-09T02:20:00.000Z" itemprop="datePublished">2016-10-09</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">2</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Load/" style="font-size: 10px;">Load</a> <a href="/tags/动画/" style="font-size: 20px;">动画</a> <a href="/tags/微信小程序/" style="font-size: 10px;">微信小程序</a> <a href="/tags/项目总结/" style="font-size: 20px;">项目总结</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">友情链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://isux.tencent.com/">腾讯ISUX</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://taobaofed.org/">淘宝FED</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://fex.baidu.com/">百度FEX</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://ued.ctrip.com/blog/">携程UED</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://www.75team.com/">360奇舞团</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>We Work Together</p>
+                <p>Copyright © 2016. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?ebf4f6902baa85472fa5f1e05e38ee86";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+        
+
+    
+        <script src="/vendor/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-share.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-video.min.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
