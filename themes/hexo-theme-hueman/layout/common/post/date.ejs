@@ -1,0 +1,4 @@
+<a href="<%- url_for(post.path) %>" class="<%= class_name %>">
+    <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, date_format) %></time>
+</a>
+by <a style="color:#006bde; text-decoration:none;" target="_blank" href="https://github.com/<%= post.author.github_name %>"><%= post.author.nick %></a>
